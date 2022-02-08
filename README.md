@@ -26,4 +26,4 @@ Screen Size
 
 ### 완성페이지
 
-https://nunu-0.github.io/
+https://nunu-0.github.io/Browser101/

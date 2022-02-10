@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Coordnates</title>
+    <!-- <script src="window_coordnations.js"></script> -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8d0d2a3c03.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="window_coordnations.css">
+</head>
+<body>
+    <section> 
+        <h1>Click Pink</h1>
+        <h4>분홍색을 눌러라!</h4>
+    </section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="pink"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        const pink = document.querySelector('.pink');
+        pink.addEventListener('click', (e)=>{
+            const rect = pink.getBoundingClientRect();
+            pink.textContent = 
+            `client: ${e.clientX} x ${e.clientY} 
+            \n page: ${e.pageX} x ${e.pageY}`;
+        });
+    </script>
+    <nav class="nav-up">
+        <button onclick="location.href='../index.html'" class="back">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="go-pink">
+        </button>
+    </nav>
+    <nav class="nav-bottom">
+        <button class="up">
+            <i class="fa fa-angle-up"></i>
+        </button>
+        <button class="down100">
+            <i class="fa fa-angle-down"></i>
+        </button>
+    </nav>
+    <script>
+        const upBtn = document.querySelector('.up');
+        const down100Btn = document.querySelector('.down100');
+        const goPink = document.querySelector('.go-pink');
+        
+        upBtn.addEventListener('click', ()=>{
+            // window.scrollTo(0, 0);
+            window.scrollTo({top: 0, left: 0, behavior:'smooth'})
+        });
+        
+        down100Btn.addEventListener('click', ()=>{
+            // window.scrollBy(0, 150);
+            window.scrollBy({top: 400, left: 0, behavior:'smooth'})
+        });
+        
+        goPink.addEventListener('click', ()=>{
+            pink.scrollIntoView();
+        });
+        </script>
+</body>
+</html>

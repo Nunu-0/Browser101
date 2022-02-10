@@ -4,25 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8d0d2a3c03.js" crossorigin="anonymous"></script>
     <title>Window Size</title>
     <style>
-        /* .tag {
-            display: inline-block;
-            background-color: thistle;
-            padding: 16px;
-            margin: 16px;
-            font-size: 30px;
-        } */
+        body{
+            background-color: floralwhite; 
+        }
+        button {
+            background: transparent;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+        .back {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: white;
+            background-color: mediumpurple;
+        }
+
+        section {
+            font-family: "Nanum Gothic Coding", monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px;
+            margin: 30px auto;
+            border: 2px solid lightpink;
+            border-radius: 20px;
+            background-color: white;
+            width: 60%;
+            max-width: 400px;
+        }
+
+        h1 {
+            padding: 10px;
+            margin: 0px;
+            font-size: 32px;
+            color: mediumpurple;
+            text-align: center;
+        }
+        h4 {
+            padding-bottom: 10px;
+            margin: 0px;
+            color: lightpink;
+            text-align: center;
+        }
+
         .tag{
+            width: 70%;
+            max-width: 600px;
             background-color: plum;
             text-align: center;
-            padding: 10px;
+            padding: 40px 10px;
             color:white; 
             font-weight: 600;
+            margin: auto;
+            border-radius: 10px;
+            line-height: 25px;
         }
     </style>
 </head>
 <body>
+    <button onclick="location.href='../index.html'" class="back">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+    <section> 
+        <h1>Window Size</h1>
+        <h4>현재 윈도우 창의 크기는?</h4>
+    </section>
+
     <div class="tag">Window Size</div>
     <script>
         const tag = document.querySelector('.tag');

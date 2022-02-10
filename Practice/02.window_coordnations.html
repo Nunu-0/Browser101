@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="02.window_coordnations.css">
 </head>
 <body>
-    <button onclick="location.href='../index.html'" class="back">
-        <i class="fas fa-arrow-left"></i>
-    </button>
+    <nav class="nav-up">
+        <button onclick="location.href='../index.html'" class="back">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <button  onclick = "goPink_click()" class="go-pink">
+        </button>
+    </nav>
     <section> 
         <h1>Click Pink Button</h1>
         <h4>분홍색 버튼을 눌러라!</h4>
@@ -35,6 +39,15 @@
     <div></div>
     <div></div>
     <div></div>
-    
+
+    <nav class="nav-bottom">
+        <button  onclick = "upBtn_click()" class="up">
+            <i class="fa fa-angle-up"></i>
+        </button>
+        <button  onclick = "down100Btn_click()" class="down100">
+            <i class="fa fa-angle-down"></i>
+        </button>
+    </nav>
+        
 </body>
 </html>

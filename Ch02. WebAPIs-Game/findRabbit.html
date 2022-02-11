@@ -30,8 +30,8 @@
     <script>
       history.scrollRestoration = "manual"
       const container = document.querySelector('.container')
-      let carrot1='<img src= "../Ch02. WebAPIs-Game/rabbits/carrot.png" class="carrot">';
-      let carrot2='<img src= "../Ch02. WebAPIs-Game/rabbits/carrot.png" class="carrot">';
+      let daikon1='<img src= "../Ch02. WebAPIs-Game/rabbits/daikon.png" class="carrot">';
+      let daikon2='<img src= "../Ch02. WebAPIs-Game/rabbits/daikon.png" class="carrot">';
       
       function randomNum(min, max){ 
         let randNum = Math.floor(Math.random()*(max-min+1)) + min; 
@@ -39,16 +39,16 @@
       }
       
       for(let i = 0; i < randomNum(1000, 100000000); i++){
-        carrot1 += '<img src= "../Ch02. WebAPIs-Game/rabbits/carrot.png" class="carrot">';
+        daikon1 += '<img src= "../Ch02. WebAPIs-Game/rabbits/daikon.png" class="carrot">';
       }
       for(let i = 0; i < randomNum(100, 10000000); i++){
-        carrot2 += '<img src= "../Ch02. WebAPIs-Game/rabbits/carrot.png" class="carrot">';
+        daikon2 += '<img src= "../Ch02. WebAPIs-Game/rabbits/daikon.png" class="carrot">';
       }
 
-      const carrotAndRabbit = carrot1 + 
-      '<img class="rabbit" src= "../Ch02. WebAPIs-Game/rabbits/rabbit.png" class="carrot">'
-      +carrot2;
-      container.innerHTML = `${carrotAndRabbit}`;
+      const daikonAndRabbit = daikon1 + 
+      '<img class="rabbit" src= "../Ch02. WebAPIs-Game/rabbits/rabbit2.png" class="carrot">'
+      +daikon2;
+      container.innerHTML = `${daikonAndRabbit}`;
 
       const findRabbit = document.querySelector('.findRabbit');
       const rabbit = document.querySelector('.rabbit');
@@ -57,7 +57,7 @@
       const body = document.querySelector('body');
         
       findRabbit.addEventListener('click',()=>{
-        rabbit.scrollIntoView({behavior:'smooth', block: 'center'});;
+        rabbit.scrollIntoView({behavior:'smooth', block: 'center'});
       });
 
       rabbit.addEventListener('click', ()=>{

@@ -12,18 +12,21 @@ https://academy.dream-coding.com/courses/browser101
 
 ---
 
-### 01. 윈도우 사이즈 표기
+### 완성페이지
+
+https://nunu-0.github.io/Browser101/
+
+
+---
+
+### 01-1. 윈도우 사이즈 표기
 
 #### 22.02.08
 
 Screen Size
 
-### 02.
+### 01-2. 클릭 좌표 & 스크롤
 
-#### 22.02.00
+#### 22.02.10
 
----
-
-### 완성페이지
-
-https://nunu-0.github.io/Browser101/
+Window Coordnations & Scroll

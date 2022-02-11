@@ -23,10 +23,20 @@ https://nunu-0.github.io/Browser101/
 
 #### 22.02.08
 
-Screen Size
+Screen Size, 윈도우 전체 크기, 바를 포함한 브라우저 크기, 브라우저 자체 크기, 페이지 크기
 
 ### 01-2. 클릭 좌표 & 스크롤
 
 #### 22.02.10
 
-Window Coordnations & Scroll
+Window Coordnations & Scroll, 클릭한 위치의 좌표 출력, 원하는 곳으로 좌표 이동
+
+### 02-1. 좌표 찾아 007
+
+#### 22.02.11
+
+Coordinates, 마우스가 가는대로 좌표 출력
+
+### 00-0. 
+
+#### 22.02.00

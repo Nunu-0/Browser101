@@ -1,6 +1,5 @@
 body {
   background-color: lightpink;
-
   margin: 0;
 }
 
@@ -23,14 +22,14 @@ button {
   border-radius: 50%;
   color: white;
   background-color: mediumpurple;
-  z-index: 1;
+  z-index: 3;
 }
 
 .title__container {
   width: 100%;
   position: fixed;
   top: 10px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .title {
@@ -42,6 +41,10 @@ button {
   margin: auto;
   color: mediumpurple;
   text-align: center;
+}
+
+.target {
+  z-index: 1;
 }
 
 img,

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8d0d2a3c03.js" crossorigin="anonymous"></script>
+    <script src="05.shoppingList.js" defer></script>
+    <link rel="stylesheet" href="05.shoppingList.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <button onclick="location.href='../index.html'" class="back">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <h3>Shopping List</h3>
+      <input type="text" name="inputT" id="inputT" onkeyup="enterkey()">
+    </nav>
+    <div class="shoppingList">
+    </div>
+    <div class="under">
+      <nav class="underbar">
+        <button class="add">
+          +
+        </button>
+      </nav>
+    </div>
+  </body>
+</html>

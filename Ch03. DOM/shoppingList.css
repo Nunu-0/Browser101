@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nanum Gothic Coding", monospace;
+  background-color: floralwhite;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ul {
+  padding: 0;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.add,
+.back {
+  color: white;
+  background-color: mediumpurple;
+}
+
+.back {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+.header,
+.fotter {
+  height: 50px;
+  padding: 0 15%;
+  min-width: 800;
+  background: linear-gradient(30deg, rgb(255, 213, 219), rgb(196, 170, 247));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: indigo;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.fotter {
+  width: 100%;
+  text-align: center;
+}
+
+#inputT {
+  width: 100%;
+  padding: 5px 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 0px;
+  outline: none;
+}
+
+.add {
+  font-size: 30px;
+  transition: all 120ms ease-in;
+}
+
+.add:hover {
+  transform: scale(1.1);
+  font-size: 32px;
+}
+
+.items {
+  width: 70%;
+  height: 100vh;
+  margin: 10px auto;
+  overflow-y: auto;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item__row {
+  width: 100%;
+  background-color: white;
+  border: 1px solid lightpink;
+  border-radius: 20px;
+  font-size: 18px;
+  display: flex;
+  padding: 5px 0;
+  margin: 7px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item__delete {
+  color: lightpink;
+  width: 20px;
+  margin: 0 15px;
+  padding: 0;
+  transition: all 120ms ease-in;
+}
+
+.item__delete:hover {
+  color: mediumpurple;
+  transform: scale(1.1);
+}
+
+.item__name {
+  margin: 0 15px;
+}
+
+/* For below 768px screen width */
+@media screen and (min-width: 768px) {
+  .back {
+    left: 15%;
+  }
+  #inputT {
+    width: 70%;
+  }
+}

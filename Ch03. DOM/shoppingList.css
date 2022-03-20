@@ -127,6 +127,11 @@ button {
 .item__name {
   margin: 0 15px;
 }
+.new-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 /* For below 768px screen width */
 @media screen and (min-width: 768px) {

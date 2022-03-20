@@ -2,16 +2,22 @@
 const inputT = document.querySelector('#inputT');
 const items = document.querySelector('.items');
 const addBtn = document.querySelector('.add');
+const forms = document.querySelectorAll('.new-form');
 
-addBtn.addEventListener('click',()=>{
-    onAdd();
-});
-
-inputT.addEventListener('keypress',(event)=>{
-    if (event.keyCode == 13) {
+forms.forEach(form=>{
+    form.addEventListener('submit',(event)=>{
+        event.preventDefault(); // submit reload stop
         onAdd();
-    }
+    });
 })
+
+items.addEventListener('click', (event) => {
+    const id = event.target.dataset.id;
+    if(id){
+        const toBeDeleted = document.querySelector(`.item__row[data-id="${id}"]`);
+        toBeDeleted.remove();
+    }
+});
 
 function onAdd(){
     var thing = inputT.value; 
@@ -26,28 +32,19 @@ function onAdd(){
     inputT.focus()
 }
 
+let id = 0; // UUID 
 function createItem(thing){
     const itemRow= document.createElement("li");
-    var item = document.createElement("div"); // 새로운 div 요소 생성
-    var itemName = document.createElement("span");
-    var itemDelete = document.createElement("button");
-    var icon = document.createElement("i");
     itemRow.setAttribute("class", "item__row");
-    item.setAttribute("class", "item");
-    itemName.setAttribute("class", "item__name");
-    itemDelete.setAttribute("class","item__delete");
-    icon.setAttribute("class", "far fa-trash-alt del");
-    
-    itemRow.appendChild(item);
-    item.appendChild(itemName);
-    item.appendChild(itemDelete);
-    itemDelete.appendChild(icon);
-
-    itemName.innerText = thing;
-
-    itemDelete.addEventListener('click', ()=>{
-        items.removeChild(itemRow);
-    })
-
+    itemRow.setAttribute("data-id", id);
+    itemRow.innerHTML = `
+        <div class="item">
+            <span class="item__name">${thing}</span>
+            <button class="item__delete">
+                <i class="far fa-trash-alt del" data-id = ${id}></i>
+            </button>
+        </div>
+    `;
+    id++;
     return itemRow;
 }

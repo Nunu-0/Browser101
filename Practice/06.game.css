@@ -1,0 +1,129 @@
+body {
+  font-family: "Nanum Gothic Coding", monospace;
+  background-color: floralwhite;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.back {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  background-color: mediumpurple;
+}
+
+.game {
+  width: 100%;
+  height: 100vh;
+  background: url("img/background.png") center/cover;
+}
+
+.game__header {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.play {
+  background-color: white;
+  color: palevioletred;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid lightpink;
+  padding: auto;
+  padding-left: 8px;
+  font-size: 20px;
+  transition: transform 120ms ease-in;
+}
+.play:hover {
+  transform: scale(1.1);
+  background-color: lightgoldenrodyellow;
+}
+.timer {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 40px;
+  font-size: 36px;
+  border-radius: 20px;
+  margin: 10px 0;
+  border: 4px solid lightpink;
+  color: palevioletred;
+}
+
+.counter {
+  background-color: palevioletred;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 28px;
+}
+
+.game__field {
+  width: 100%;
+  height: 55%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.pop-up {
+  display: block;
+  background-color: rgba(0, 0, 0, 50%);
+  position: absolute;
+  bottom: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  height: 15%;
+  border-radius: 15px;
+  padding: 20px;
+}
+.retry {
+  background-color: lightpink;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  padding: auto;
+  font-size: 20px;
+  transition: transform 120ms ease-in;
+}
+.retry:hover {
+  transform: scale(1.1) rotate(30deg);
+  background-color: palevioletred;
+}
+.result {
+  color: white;
+  font-size: 46px;
+}
+
+.pup-up__hide {
+  display: none;
+}

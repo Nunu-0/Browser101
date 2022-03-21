@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8d0d2a3c03.js" crossorigin="anonymous"></script>
+    <script src="06.game.js" defer></script>
+    <link rel="stylesheet" href="06.game.css" />
+  </head>
+  <body>
+    <button onclick="location.href='../index.html'" class="back">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <section class="game">
+      <header class="game__header">
+        <button class="play"><i class="fa fa-play"></i></button>
+        <span class="timer">0:00</span>
+        <span class="counter">10</span>
+      </header>
+      <div class="game__field">
+        <img src="img/bug.png" alt="" class="">
+        <img src="img/carrot.png" alt="">
+      </div>
+    </section>
+    <section class="pop-up">
+      <button class="retry"><i class="fa fa-rotate-right"></i></button>
+      <span class="result">you win</span>
+    </section>
+  </body>
+</html>

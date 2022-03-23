@@ -7,11 +7,10 @@ const counter = document.querySelector(".counter");
 const popUp = document.querySelector(".pop-up");
 const retry = document.querySelector(".retry");
 const result = document.querySelector(".result");
-
-const fieldRect = field.getBoundingClientRect();
 const CARROT_CNT=10;
 const BUG_CNT=10;
 const timeDefault = 5;
+const imgSize = 80;
 
 let started = false;
 let cnt = 0;
@@ -33,8 +32,7 @@ function init(){
 };
 
 function addItem(className, count, imgPath){
-    const x1=0;
-    const y1=0;
+    const fieldRect = field.getBoundingClientRect();
     const x2=fieldRect.width;
     const y2=fieldRect.height;
     for(let i = 0; i<count; i++){
@@ -42,8 +40,8 @@ function addItem(className, count, imgPath){
         item.setAttribute("src",imgPath);
         item.setAttribute("class",className);
         item.style.position='absolute';
-        const x=randomNum(x1, x2-item.width);
-        const y=randomNum(y1, y2-item.height);
+        const x=randomNum(0, x2-imgSize);
+        const y=randomNum(0, y2-imgSize);
         item.style.left=`${x}px`;
         item.style.top=`${y}px`;
         field.appendChild(item);
@@ -100,6 +98,7 @@ function finish(outcome){
 }
 
 function stop(){
+    started = false;
     StopGameTimer();
     hideStartBtn();
     showPopUpWithText("RETRY?");
@@ -143,7 +142,6 @@ function StopGameTimer(){
 }
 
 function onFieldClick(event){
-    console.log(event);
     if(!started){
         return;
     }

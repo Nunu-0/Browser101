@@ -80,8 +80,7 @@ class Game{
 
     start(){
         this.started = !this.started;
-        this.initGame();
-        sound.playBg();
+        this.initGame();     
         this.showStopBtn();
         this.showTimerAndScore();
         this.startGameTimer();

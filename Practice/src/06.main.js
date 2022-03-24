@@ -34,6 +34,7 @@ game.setGameStopListener((reason)=>{
 });
 
 gameFinishBanner.setClickListener(()=>{
+    sound.playBg();
     game.start();
     gameFinishBanner.hide();
 })

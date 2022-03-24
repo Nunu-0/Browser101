@@ -99,6 +99,14 @@ button {
   bottom: 0px;
 }
 
+.pop-up__block {
+  position: absolute;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
 .pop-up {
   display: block;
   background-color: rgba(0, 0, 0, 50%);
@@ -133,7 +141,7 @@ button {
 }
 
 .pop-up__hide {
-  display: none;
+  display: flex;
 }
 
 .carrot,

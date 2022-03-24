@@ -5,6 +5,7 @@ export default class PopUp{
         this.popUp = document.querySelector(".pop-up");
         this.retry = document.querySelector(".retry");
         this.result = document.querySelector(".result");
+        this.clickBlock = document.querySelector(".pop-up__block");
         this.retry.addEventListener('click',()=>{
             this.onClick && this.onClick();
         })
@@ -16,10 +17,10 @@ export default class PopUp{
     
     showWithText(text){
         this.result.innerText = text;
-        this.popUp.classList.remove('pop-up__hide');
+        this.clickBlock.classList.add('pop-up__hide');
     }
 
     hide(){
-        this.popUp.classList.add('pop-up__hide');
+        this.clickBlock.classList.remove('pop-up__hide');
     }
 }
